@@ -14,7 +14,8 @@ class index {
 	public function init() {
 		//获取siteid
 		$siteid = isset($_REQUEST['siteid']) && trim($_REQUEST['siteid']) ? intval($_REQUEST['siteid']) : 1;
-		
+		$SEO = seo($siteid);
+
 		//搜索配置
 		$search_setting = getcache('search');
 		$setting = $search_setting[$siteid];
